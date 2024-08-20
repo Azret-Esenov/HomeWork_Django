@@ -1,0 +1,10 @@
+{%extends 'main_page.html'%}
+{%block content%}
+<div style="background-color: lightgrey; color: #0a0b0d; padding: 20px; border: 2px solid #0a0b0d">
+<form method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Login</button>
+</form>
+</div>
+{%endblock%}

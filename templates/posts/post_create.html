@@ -1,0 +1,8 @@
+{% extends 'main_page.html' %}
+{% block content %}
+<form style="padding: 20px" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Create Post</button>
+</form>
+{%endblock%}
