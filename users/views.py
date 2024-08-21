@@ -30,7 +30,7 @@ def login_view(request):
         user = authenticate(**form.cleaned_data)
         if user is None:
             form.add_error('username', f'Пользователь {form.cleaned_data.get('username')} не найден')
-            login(request, user)
+        login(request, user)
         return redirect('/main_page/')
 
 
